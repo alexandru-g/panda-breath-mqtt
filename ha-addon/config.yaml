@@ -1,0 +1,30 @@
+name: "Panda Breath MQTT Bridge"
+version: "0.3.5"
+hassio_api: true
+slug: "panda_breath_mqtt"
+description: "Bridges Biqu Panda Breath to Home Assistant via MQTT Discovery"
+url: "https://github.com/alexandru-g/panda-breath-mqtt"
+arch:
+  - amd64
+  - aarch64
+  - armv7
+startup: application
+boot: auto
+options:
+  ws_host: ""
+  mqtt_host: "core-mosquitto"
+  mqtt_port: 1883
+  mqtt_username: ""
+  mqtt_password: ""
+  device_name: "Panda Breath"
+  device_id: "panda_breath"
+  log_level: "INFO"
+schema:
+  ws_host: str
+  mqtt_host: str
+  mqtt_port: port
+  mqtt_username: str?
+  mqtt_password: password?
+  device_name: str?
+  device_id: str?
+  log_level: "list(DEBUG|INFO|WARNING|ERROR)?"
